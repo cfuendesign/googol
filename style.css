@@ -11,10 +11,10 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     width: 100%;
+    padding-right: 20px;
 }
 
 nav > div {
-    height: 48px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -24,7 +24,8 @@ nav > div {
 }
 
 nav > div > a,
-nav > div > button {
+nav > div > button,
+nav > div > img {
     margin-left: 17px;
 }
 
@@ -32,7 +33,13 @@ nav > div > a {
     font: 13px/27px Arial;
 }
 
-nav > div > #login {
+nav > div > #gh-profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+/* nav > div > #login {
     border: 0;
     border-radius: 4px;
     padding: 9px 23px 9px 23px;
@@ -54,7 +61,7 @@ nav > div > #login {
     border-radius: 4px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
+} */
 
 nav > div > #more {
     border: none;

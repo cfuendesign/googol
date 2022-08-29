@@ -19,9 +19,7 @@
             ></path>
           </svg>
         </button>
-        <button id="login">
-          Iniciar sesión
-        </button>
+        <img id="gh-profile" src=""/>
       </div>
     </nav>
     <img id="goog-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png" />
@@ -40,4 +38,18 @@
       </button>
     </div>
   </body>
+  <script defer>
+    let img = ""
+    console.log("Hi from script")
+    let getImage = async () => {
+      console.log("Hi from getImage()")
+      img = await fetch("https://api.github.com/users/cfuendesign")
+      .then((response)=>response.json())
+      .then((data)=> {
+      document.querySelector("nav > div > #gh-profile").src = data.avatar_url
+      console.log("Done!")
+      })
+    }
+    getImage()
+  </script>
 </html>
