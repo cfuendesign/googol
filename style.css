@@ -4,6 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
 nav {
@@ -11,7 +12,6 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     width: 100%;
-    padding-right: 20px;
 }
 
 nav > div {
@@ -21,22 +21,41 @@ nav > div {
     align-items: center;
     color: white;
     fill: white;
+    padding: 10px 14px 10px 0;
 }
 
-nav > div > a,
-nav > div > button,
+nav > div > svg,
 nav > div > img {
-    margin-left: 17px;
+    margin-left: 8px;
 }
 
-nav > div > a {
+nav > div > div#links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > div > div#links > a {
+    margin-left: 15px;
     font: 13px/27px Arial;
 }
 
+nav > div > div#links > a:hover {
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
 nav > div > #gh-profile {
+    padding: 4px;
     width: 32px;
     height: 32px;
     border-radius: 100%;
+}
+
+nav > div > #gh-profile:hover {
+    background-color: rgba(232,234,237,.08);
+    cursor: pointer;
 }
 
 /* nav > div > #login {
@@ -63,6 +82,13 @@ nav > div > #gh-profile {
     box-sizing: border-box;
 } */
 
+nav > div > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 nav > div > #more {
     border: none;
     background-color: transparent;
@@ -70,21 +96,27 @@ nav > div > #more {
     padding: 0;
 }
 
-#more svg {
-    padding: 8px 8px 8px 8px;
+svg#more {
+    padding: 8px 8px 8px 8px !important;
+    margin-left: 19px !important;
     width: 24px;
     height: 24px;
+    border-radius: 100%;
+}
+
+svg#more:hover {
+    background-color: rgba(232,234,237,.08);
 }
 
 #goog-logo {
     max-width: 272px;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 }
 
 #searchbar {
     border: 1px solid #5f6368;
     border-radius: 2rem;
-    width: 42%;
+    width: 41.6%;
     height: 44px;
     padding-left: 14px;
     display: flex;
@@ -94,7 +126,13 @@ nav > div > #more {
     margin-bottom: 20px;
 }
 
-#searchbar > svg {
+#searchbar > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#searchbar > div > svg#lupa {
     width: 20px;
     fill: #9aa0a6;
 }
@@ -108,6 +146,13 @@ nav > div > #more {
     font-family: arial,sans-serif;
     color: #e8eaed;
     background-color: transparent;
+}
+
+#searchbar:hover,
+#searchbar.focused {
+    box-shadow: 0 1px 6px 0 #171717;
+    background: #303134;
+    border-color: rgba(223,225,229,0);
 }
 
 #underbar {
