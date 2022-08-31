@@ -171,3 +171,9 @@ svg#more:hover {
     font-weight: 500;
     background-color: #303134;
 }
+
+#underbar > button:hover,
+#underbar > button:focus {
+    border: 1px solid #5f6368;
+    padding: 10px 15px 10px 15px;
+}
