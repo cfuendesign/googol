@@ -47,7 +47,7 @@
   <script defer>
     let img = ""
     let getImage = async () => {
-      img = await fetch("https://api.github.com/users/cfuendesign")
+      img = await fetch("https://api.github.com/users/cfuendev")
       .then((response)=>response.json())
       .then((data)=> {
       document.querySelector("nav > div > #gh-profile").src = data.avatar_url
