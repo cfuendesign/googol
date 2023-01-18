@@ -46,9 +46,7 @@
   </body>
   <script defer>
     let img = ""
-    console.log("Hi from script")
     let getImage = async () => {
-      console.log("Hi from getImage()")
       img = await fetch("https://api.github.com/users/cfuendesign")
       .then((response)=>response.json())
       .then((data)=> {
